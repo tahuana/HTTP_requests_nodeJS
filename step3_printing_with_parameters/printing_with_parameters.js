@@ -2,12 +2,12 @@ function getAndPrintHTML (options) {
 
   var https = require('https');
 
-  var requestOptions = options;
+  // var requestOptions = options;
 
   var content = "";
 
   /* Add your code here */
-  https.get(requestOptions, function (response) {
+  https.get(options, function (response) {
 
       // set encoding of received data to UTF-8
       response.setEncoding('utf8');
