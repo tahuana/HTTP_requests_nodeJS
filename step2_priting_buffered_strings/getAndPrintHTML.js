@@ -19,13 +19,13 @@ function getAndPrintHTML () {
       response.on('data', function (data) {
         console.log('Chunk Received. Length:', data.length);
         content += content + data;
-        console.log("Content: ", content);
       });
 
       // the callback is invoked when all of the data has been received
       // (the `end` of the stream)
       response.on('end', function() {
         console.log('Response stream complete.');
+        console.log("Content: ", content);
       });
 
     });
